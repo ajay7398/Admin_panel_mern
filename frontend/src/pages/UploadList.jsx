@@ -20,7 +20,7 @@ const UploadList = () => {
         formData.append('file', file);
 
         try {
-            const res = await axios.post('http://localhost:5000/api/lists/upload', formData, {
+            const res = await axios.post('https://admin-panel-mern.onrender.com/api/lists/upload', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     Authorization: `Bearer ${token}`,
@@ -39,7 +39,7 @@ const UploadList = () => {
 
     const fetchDistributedLists = async () => {
         try {
-            const res = await axios.get('http://localhost:5000/api/lists', {
+            const res = await axios.get('https://admin-panel-mern.onrender.com/api/lists', {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

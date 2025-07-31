@@ -14,7 +14,7 @@ const AgentManagement = () => {
 
   const fetchAgents = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/agents', {
+      const res = await axios.get('https://admin-panel-mern.onrender.com/api/agents', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -39,7 +39,7 @@ const AgentManagement = () => {
 
     try {
      const res = await axios.post(
-  'http://localhost:5000/api/agents',
+  'https://admin-panel-mern.onrender.com/api/agents',
   {
     ...formData,
     mobile: `${formData.countryCode}${formData.mobile}`, // Combine here
