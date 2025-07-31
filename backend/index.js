@@ -7,7 +7,11 @@ import cors from 'cors';
 import listRouter from './routes/listRoutes.js';
 dotenv.config();
 const app = express();
-app.use(cors());
+const corsOptions = {
+  origin: 'https://admin-agent-ajay.netlify.app',
+  credentials: true,
+};
+app.use(cors(corsOptions)); 
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
